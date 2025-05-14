@@ -1,7 +1,7 @@
-all: netfilter-test
+all: 1m-block
 
-netfilter-test: main.c
-	gcc -o netfilter-test main.c -lnetfilter_queue
+1m-block: main.c
+	gcc -O2 -o 1m-block main.c -lnetfilter_queue -lrt
 
 clean:
-	rm -f netfilter-test
+	rm -f 1m-block
